@@ -179,9 +179,9 @@ a:hover { color: var(--suriname-red); }
 .section--contact:not(:last-child)::after {
   background: linear-gradient(180deg, rgba(255,215,0,0.08) 0%, rgba(185,47,57,0.05) 100%);
 }
-.section__intro { max-width: 720px; margin-bottom: 2rem; }
-.section__intro h2 { font-size: 2rem; margin-bottom: 0.8rem; color: var(--suriname-green); }
-.section__intro p { color: var(--muted); }
+.section__intro { margin-bottom: 2rem; width: 100%; }
+.section__intro h2 { font-size: 2rem; margin-bottom: 0.8rem; color: var(--suriname-green); word-wrap: break-word; overflow-wrap: break-word; }
+.section__intro p { color: var(--muted); word-wrap: break-word; overflow-wrap: break-word; }
 
 /* =====================
    CARDS Y GRIDS
