@@ -372,8 +372,15 @@ a:hover { color: var(--suriname-red); }
   gap: 1rem;
   color: var(--suriname-white);
 }
-.site-footer nav { display: flex; gap: 1rem; }
-.site-footer a { color: var(--suriname-white); }
+.site-footer nav { 
+  display: flex; 
+  gap: 1rem; 
+  flex-wrap: wrap;
+}
+.site-footer a { 
+  color: var(--suriname-white);
+  white-space: nowrap;
+}
 .site-footer a:hover { color: var(--suriname-yellow); }
 
 /* =====================
