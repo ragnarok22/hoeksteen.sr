@@ -1,0 +1,14 @@
+/* TEAM */
+Lead Developer: Rafa Rodriguez
+Site: rafageist@divengine.com, https://rafageist.com
+Twitter: @rafageist
+Location: Remote, Worldwide
+
+/* THANKS */
+Name: De Hoeksteen Basisschool College
+
+/* SITE */
+Last update: 2025/11/15
+Standards: HTML5, CSS3, ES6
+Components: Font Awesome, IntersectionObserver API, Vanilla JS
+Software: Visual Studio Code, Git, GitHub Pages
