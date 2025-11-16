@@ -1,4 +1,4 @@
-﻿# Basisschool De Hoeksteen Static Site
+﻿# De Hoeksteen Basisschool & College Static Site
 
 Landing page for Basisschool De Hoeksteen (Paramaribo). The site is a static bundle hosted on GitHub Pages with the custom domain `hoeksteen.sr`. Everything is plain HTML, CSS, vanilla JavaScript, and static assets (images plus PDFs). This guide helps any contributor clone the repo, understand the layout, run it locally, collaborate through feature branches, and publish from a pull request (PR).
 
