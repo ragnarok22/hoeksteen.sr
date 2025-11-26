@@ -448,6 +448,16 @@ ul {
   padding: 80px 0;
 }
 
+.cta-section .btn-secondary {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.cta-section .btn-secondary:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
 .cta-container {
   display: flex;
   justify-content: space-between;
