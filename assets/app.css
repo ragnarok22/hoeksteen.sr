@@ -177,9 +177,7 @@ ul {
 /* --- Hero Section --- */
 .hero {
   min-height: 90vh;
-  background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=1920');
-  background-size: cover;
-  background-position: center;
+  background-color: var(--primary);
   position: relative;
   display: flex;
   align-items: center;
@@ -192,6 +190,25 @@ ul {
   position: absolute;
   inset: 0;
   background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.6));
+}
+
+.hero-slider {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
 }
 
 .hero-content,
