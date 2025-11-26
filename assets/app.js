@@ -1,62 +1,24 @@
 ﻿(() => {
-  // Floating navigation menu
-  const floatingMenu = document.querySelector('[data-floating-menu]');
-  const menuToggle = document.querySelector('[data-menu-toggle]');
-  const menuOverlay = document.querySelector('[data-menu-overlay]');
-  const menuClose = document.querySelector('[data-menu-close]');
-  let previouslyFocusedElement = null;
+  // Navbar hamburger menu for mobile
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
 
-  if (floatingMenu && menuToggle) {
-    const menuLinks = floatingMenu.querySelectorAll('.floating-menu__nav a');
-
-    const openMenu = () => {
-      if (floatingMenu.classList.contains('floating-menu--open')) return;
-      previouslyFocusedElement = document.activeElement;
-      floatingMenu.classList.add('floating-menu--open');
-      floatingMenu.setAttribute('aria-hidden', 'false');
-      menuToggle.setAttribute('aria-expanded', 'true');
-      document.body.classList.add('menu-open');
-      const firstLink = floatingMenu.querySelector('.floating-menu__nav a');
-      if (firstLink) {
-        setTimeout(() => firstLink.focus(), 80);
-      }
-    };
-
-    const closeMenu = () => {
-      if (!floatingMenu.classList.contains('floating-menu--open')) return;
-      floatingMenu.classList.remove('floating-menu--open');
-      floatingMenu.setAttribute('aria-hidden', 'true');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('menu-open');
-      if (previouslyFocusedElement && typeof previouslyFocusedElement.focus === 'function') {
-        previouslyFocusedElement.focus();
-      } else {
-        menuToggle.focus();
-      }
-    };
-
-    menuToggle.addEventListener('click', () => {
-      if (floatingMenu.classList.contains('floating-menu--open')) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
     });
 
-    [menuOverlay, menuClose].forEach((el) => {
-      if (el) {
-        el.addEventListener('click', closeMenu);
-      }
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
     });
 
-    menuLinks.forEach((link) => {
-      link.addEventListener('click', closeMenu);
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && floatingMenu.classList.contains('floating-menu--open')) {
-        event.preventDefault();
-        closeMenu();
+    // Close menu when clicking outside
+    document.addEventListener('click', (event) => {
+      if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+        navLinks.classList.remove('active');
       }
     });
   }
@@ -423,6 +385,28 @@ Ouders van ${data.childName}
     });
     sections.forEach(section => {
       observer.observe(section);
+    });
+
+    // Smooth Scroll for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        const href = this.getAttribute("href");
+        if (href === "#") return;
+
+        const targetElement = document.querySelector(href);
+        if (targetElement) {
+          e.preventDefault();
+          // Account for fixed header height (110px for site-header)
+          const headerOffset = 110;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }
+      });
     });
   });
 

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="nl">
 <head>
   <meta charset="utf-8">
@@ -52,6 +52,8 @@
   }
   </script>
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <!-- Google Fonts - New Design -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/app.css">
   <!-- FontAwesome for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -64,160 +66,113 @@
     gtag('config', 'G-01YXDHPTHL');
   </script>
 </head>
+
 <body>
-  <header class="site-header" id="top">
-    <div class="branding">
-      <img src="assets/images/logo.svg" alt="Basisschool De Hoeksteen logo" class="branding__logo">
+  <!-- New Design Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">De Hoeksteen<span class="dot">.</span>sr</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#keuze">Onderwijs</a></li>
+        <li><a href="#over">Over Ons</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact" class="btn-nav">Inschrijven</a></li>
+      </ul>
+      <div class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Overlay -->
+  <header id="home" class="hero">
+    <div class="overlay"></div>
+    <div class="container hero-content">
+      <h1>Bouwen aan de toekomst op een <span class="highlight">sterk fundament</span></h1>
+      <p>Christelijk onderwijs met persoonlijke aandacht in het hart van Paramaribo. Van peuter tot young professional.</p>
+      <div class="hero-buttons">
+        <a href="#keuze" class="btn btn-primary">Kies uw richting</a>
+        <a href="#contact" class="btn btn-secondary">Plan een kennismaking</a>
+      </div>
     </div>
   </header>
 
-  <button class="floating-menu-toggle" type="button" aria-label="Open navigatiemenu" aria-expanded="false" data-menu-toggle>
-    <span class="sr-only">Open hoofdmenu</span>
-    <i class="fa-solid fa-bars"></i>
-  </button>
-  <div class="floating-menu" data-floating-menu aria-hidden="true">
-    <div class="floating-menu__overlay" data-menu-overlay></div>
-    <div class="floating-menu__panel" role="dialog" aria-modal="true" aria-label="Hoofdmenu">
-      <div class="floating-menu__header">
-        <p>Menu</p>
-        <button class="floating-menu__close" type="button" aria-label="Sluit menu" data-menu-close>
-          <i class="fa-solid fa-xmark"></i>
-        </button>
+  <!-- Paths/Onderwijs Section -->
+  <section id="keuze" class="paths section visible">
+    <div class="container">
+      <div class="section-header">
+        <h2>Kies uw Onderwijsroute</h2>
+        <p>Wij bieden een complete leerweg onder één dak.</p>
       </div>
-      <nav class="floating-menu__nav">
-        <ul>
-          <li><a href="#welkom">Welkom</a></li>
-          <li><a href="#basisschool">Basisschool</a></li>
-          <li><a href="#college">College</a></li>
-          <li><a href="#team">Ons team</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="path-grid">
+        <div class="card path-card">
+          <div class="card-image basis-img"></div>
+          <div class="card-content">
+            <h3>Basisschool</h3>
+            <span class="badge">Peuterschool t/m Leerjaar 8</span>
+            <p>Een veilige, warme omgeving waar kinderen spelenderwijs leren en groeien. Tweetalig aanbod beschikbaar.</p>
+            <ul class="feature-list">
+              <li><i class="fa-solid fa-check-circle"></i> Maximaal 20 leerlingen per klas</li>
+              <li><i class="fa-solid fa-check-circle"></i> Persoonlijke begeleiding</li>
+              <li><i class="fa-solid fa-check-circle"></i> Nederlands & Engels</li>
+            </ul>
+            <a href="docs/hoeksteen-schoolgids-basisschool.pdf" class="btn-text" download>Download Schoolgids &rarr;</a>
+          </div>
+        </div>
+
+        <div class="card path-card">
+          <div class="card-image college-img"></div>
+          <div class="card-content">
+            <h3>College</h3>
+            <span class="badge">Leerjaar 1 t/m 6 (VOJ/VOS)</span>
+            <p>Voorbereiding op vervolgstudies (lokaal & internationaal) met focus op academische excellentie.</p>
+            <ul class="feature-list">
+              <li><i class="fa-solid fa-check-circle"></i> HAVO & VWO Profielen</li>
+              <li><i class="fa-solid fa-check-circle"></i> Business & ICT Focus</li>
+              <li><i class="fa-solid fa-check-circle"></i> Toekomstgerichte coaching</li>
+            </ul>
+            <a href="docs/hoeksteen-studiegids-college.pdf" class="btn-text" download>Download Studiegids &rarr;</a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <main>
-    <!-- Slideshow Section -->
-    <section class="slideshow-section">
-      <div class="slideshow-container">
-        <div class="slide active" style="background-image: url('assets/images/slides/Slide0.jpg');"></div>
-        <div class="slide" style="background-image: url('assets/images/slides/Slide2.jpg');"></div>
-        <div class="slide" style="background-image: url('assets/images/slides/Slide3.jpg');"></div>
-        <div class="slide" style="background-image: url('assets/images/slides/slide5.jpg');"></div>
-        <div class="slide" style="background-image: url('assets/images/slides/slide6.jpg');"></div>
-      </div>
-    </section>
-
-    <section id="welkom" class="hero">
-      <div class="hero__content">
-        <h1>Welkom bij Basisschool De Hoeksteen</h1>
-        <p>De Hoeksteen biedt kwalitatief onderwijs in het hart van Paramaribo. Basisschool van peuterschool tot leerjaar 8 en College van leerjaar 1 tot leerjaar 6 - een warme, gastvrije gemeenschap waar elk kind optimaal kan groeien.</p>
-        <div class="hero__actions">
-          <a class="button button--ghost" href="#contact">Plan een kennismaking</a>
-        </div>
-      </div>
-      <div class="hero__image" aria-hidden="true"></div>
-      <!-- Floating Registration Button (icon only, above WhatsApp) -->
-      <a class="floating-registration" onclick="openRegistrationModal()" title="Registreer nu">
-        <i class="fa-solid fa-user-plus"></i>
-      </a>
-    </section>
-
-    <!-- Unique Features Section -->
-    <section class="section section--highlight">
-      <div class="section__intro">
-        <h2>Waarom kiezen voor De Hoeksteen?</h2>
-        <p>Wij bieden unieke voordelen die uw kind de beste start geven.</p>
-      </div>
-      <div class="highlight-grid">
-        <div class="highlight-card">
-          <div class="highlight-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-          <h3>Peuterschool t/m College leerjaar 6</h3>
-          <p>Complete onderwijsroute onder één dak: Basisschool (peuterschool t/m leerjaar 8) en College (leerjaar 1 t/m 6)</p>
-        </div>
-        <div class="highlight-card">
-          <div class="highlight-icon"><i class="fa-solid fa-star"></i></div>
-          <h3>Persoonlijke aandacht</h3>
-          <p>Kleinschalig onderwijs met ruimte voor persoonlijke groei en ontwikkeling.</p>
-        </div>
-        <div class="highlight-card">
-          <div class="highlight-icon"><i class="fa-solid fa-users"></i></div>
-          <h3>Maximaal 400 Leerlingen</h3>
-          <p>Persoonlijke aandacht en betrokkenheid door kleinschalige opzet.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="basisschool" class="section">
-      <div class="section__intro">
-        <h2>Basisschool (peuterschool t/m leerjaar 8)</h2>
-        <p>Van de allereerste stappen in de peuterschool tot leerjaar 8 - wij begeleiden uw kind doorheen elke fase van hun ontwikkeling in de basisschool.</p>
-      </div>
+  <!-- Features Section -->
+  <section id="over" class="features">
+    <div class="container">
       <div class="feature-grid">
-        <article class="feature-card">
-          <h3>Gevarieerd Onderwijs</h3>
-          <p>Wij bieden lessen volledig in het Nederlands of Engels, afgestemd op de behoeften van uw kind.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Kleine Klassen</h3>
-          <p>Met maximaal 400 leerlingen zorgen wij voor persoonlijke aandacht en een warme, gastvrije leeromgeving waar elk kind zich thuis voelt.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Hart van Paramaribo</h3>
-          <p>Centraal gelegen aan de Keizerstraat 114, gemakkelijk bereikbaar en midden in het culturele hart van onze hoofdstad.</p>
-        </article>
-      </div>
-      <p class="download-hint">Download de volledige brochure met lesschema’s en tarieven:</p>
-      <div class="download-card-grid">
-        <a class="download-card" href="docs/hoeksteen-schoolgids-basisschool.pdf" download>
-          <span class="download-card__icon"><i class="fa-regular fa-file-pdf"></i></span>
-          <span class="download-card__content">
-            <span class="download-card__title">Schoolgids Basisschool</span>
-            <span class="download-card__desc">Praktische informatie, lesschema’s en tarieven voor de basisschool.</span>
-          </span>
-            <span class="download-card__action"><i class="fa-solid fa-download"></i> Download</span>
-        </a>
-      </div>
-    </section>
-
-    <section id="college" class="section section--accent">
-      <div class="section__intro">
-        <h2>De Hoeksteen College (leerjaar 1 t/m leerjaar 6)</h2>
-        <p>Onze college afdeling van leerjaar 1 tot leerjaar 6 bereidt leerlingen optimaal voor op hun toekomst, zowel lokaal als internationaal, met een sterke academische basis.</p>
-      </div>
-      <div class="feature-grid">
-        <article class="feature-card">
-          <h3>Keuze in Taal</h3>
-          <p>College-leerlingen kunnen kiezen voor lessen in het Nederlands of Engels, afhankelijk van hun toekomstplannen.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Voorbereiding Vervolgstudie</h3>
-          <p>Ons programma bereidt leerlingen voor op vervolgstudies zowel in Suriname als internationaal, met sterke academische basis.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Gemeenschapspartnerschappen</h3>
-          <p>We werken samen met lokale organisaties en onderwijsinstellingen om onze leerlingen de best mogelijke start te geven.</p>
-        </article>
-      </div>
-      <p class="download-hint">Meer weten? Bekijk de uitgebreide informatie over ons college:</p>
-      <div class="download-card-grid">
-        <a class="download-card" href="docs/hoeksteen-studiegids-college.pdf" download>
-          <span class="download-card__icon"><i class="fa-regular fa-file-pdf"></i></span>
-          <span class="download-card__content">
-            <span class="download-card__title">Studiegids College 2025-2026</span>
-            <span class="download-card__desc">Alle studierichtingen en informatie voor het collegejaar 2025-2026.</span>
-          </span>
-            <span class="download-card__action"><i class="fa-solid fa-download"></i> Download</span>
-        </a>
-      </div>
-    </section>
-
-    <section id="team" class="section">
-      <div class="team-header">
-        <div class="section__intro">
-          <h2>Ons team</h2>
-          <p>Een betrokken team van leerkrachten, coaches en ondersteunend personeel zorgt dagelijks voor een warme, veilige schoolomgeving.</p>
+        <div class="feature-item">
+          <i class="fa-solid fa-map-pin icon-lg"></i>
+          <h4>Hartje Paramaribo</h4>
+          <p>Centraal gelegen aan de Keizerstraat 114, makkelijk bereikbaar voor iedereen.</p>
         </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-users icon-lg"></i>
+          <h4>Kleinschalig</h4>
+          <p>Maximaal 400 leerlingen totaal. Iedereen kent elkaar bij De Hoeksteen.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-shield-check icon-lg"></i>
+          <h4>Veiligheid</h4>
+          <p>Strikt anti-pestprotocol en een toegewijd zorgteam met psycholoog.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-globe icon-lg"></i>
+          <h4>Wereldburger</h4>
+          <p>Sterke focus op talen en internationale vaardigheden.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="team section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Ons Team</h2>
+        <p>Een betrokken team van leerkrachten en specialisten.</p>
       </div>
       <div class="staff-grid">
         <!-- Director -->
@@ -226,114 +181,114 @@
           <h3 class="staff-name">Graceffa Kasandikromo-Atromoi</h3>
           <p class="staff-role">Director</p>
         </div>
-        
+
         <!-- Deputy Directors -->
         <div class="staff-card">
           <img src="assets/images/staff/haidy-wolff-bakboord.webp" alt="Haidy Wolff-Bakboord" class="staff-photo">
           <h3 class="staff-name">Haidy Wolff-Bakboord</h3>
-          <p class="staff-role">Deputy Director Basisschool Onderbouw, Media Library</p>
+          <p class="staff-role">Deputy Director Basisschool Onderbouw</p>
         </div>
         <div class="staff-card">
           <img src="assets/images/staff/wendy-kartowikromo-saiman.webp" alt="Wendy Kartowikromo-Saiman" class="staff-photo">
           <h3 class="staff-name">Wendy Kartowikromo-Saiman</h3>
-          <p class="staff-role">Deputy Director Basisschool Bovenbouw, Teacher Grade 8</p>
+          <p class="staff-role">Deputy Director Basisschool Bovenbouw</p>
         </div>
         <div class="staff-card">
           <img src="assets/images/staff/Stephanie-Bierre-Jones.jpeg" alt="Stephanie Bierre-Jones" class="staff-photo">
           <h3 class="staff-name">Stephanie Bierre-Jones</h3>
-          <p class="staff-role">Deputy Director College Onderbouw, Teacher English & Dutch</p>
+          <p class="staff-role">Deputy Director College Onderbouw</p>
         </div>
-        
-        <!-- Teachers by Grade -->
+
+        <!-- Teachers -->
         <div class="staff-card">
           <img src="assets/images/staff/yvette-hoop.webp" alt="Yvette Hoop" class="staff-photo">
           <h3 class="staff-name">Yvette Hoop</h3>
-          <p class="staff-role">Teacher, Pre-school</p>
+          <p class="staff-role">Teacher Pre-school</p>
         </div>
         <div class="staff-card">
           <img src="assets/images/staff/peggy-ankossie.webp" alt="Peggy Ankossie" class="staff-photo">
           <h3 class="staff-name">Peggy Ankossie</h3>
-          <p class="staff-role">Teacher, Grade 1</p>
+          <p class="staff-role">Teacher Grade 1</p>
         </div>
         <div class="staff-card">
           <img src="assets/images/user.png" alt="Veromi Hoepel" class="staff-photo">
           <h3 class="staff-name">Veromi Hoepel</h3>
-          <p class="staff-role">Teacher, Grade 1</p>
+          <p class="staff-role">Teacher Grade 1</p>
         </div>
         <div class="staff-card">
           <img src="assets/images/staff/Marissa-Ansoe.jpeg" alt="Marissa Ansoe" class="staff-photo">
           <h3 class="staff-name">Marissa Ansoe</h3>
-          <p class="staff-role">Teacher, Grade 2</p>
+          <p class="staff-role">Teacher Grade 2</p>
         </div>
         <div class="staff-card">
           <img src="assets/images/staff/Savira-Dameri.jpeg" alt="Savira Dameri" class="staff-photo">
           <h3 class="staff-name">Savira Dameri</h3>
-          <p class="staff-role">Teacher, Grade 3</p>
+          <p class="staff-role">Teacher Grade 3</p>
         </div>
         <div class="staff-card">
           <img src="assets/images/staff/sheree-abdoellah.webp" alt="Sheree Abdoellah" class="staff-photo">
           <h3 class="staff-name">Sheree Abdoellah</h3>
-          <p class="staff-role">Teacher, Grade 4</p>
+          <p class="staff-role">Teacher Grade 4</p>
         </div>
         <div class="staff-card">
           <img src="assets/images/user.png" alt="Consuela Pengel Tobi" class="staff-photo">
           <h3 class="staff-name">Consuela Pengel Tobi</h3>
-          <p class="staff-role">Teacher, Grade 4</p>
+          <p class="staff-role">Teacher Grade 4</p>
         </div>
         <div class="staff-card">
           <img src="assets/images/user.png" alt="Chanelva Poeketie" class="staff-photo">
           <h3 class="staff-name">Chanelva Poeketie</h3>
-          <p class="staff-role">Teacher, Grade 5</p>
+          <p class="staff-role">Teacher Grade 5</p>
         </div>
         <div class="staff-card">
           <img src="assets/images/staff/poodja-jaddoe.webp" alt="Poodja Jaddoe" class="staff-photo">
           <h3 class="staff-name">Poodja Jaddoe</h3>
-          <p class="staff-role">Teacher, Grade 6</p>
+          <p class="staff-role">Teacher Grade 6</p>
         </div>
         <div class="staff-card">
           <img src="assets/images/staff/rachel-duurham.webp" alt="Rachel Duurham" class="staff-photo">
           <h3 class="staff-name">Rachel Duurham</h3>
-          <p class="staff-role">Teacher, Grade 7</p>
+          <p class="staff-role">Teacher Grade 7</p>
         </div>
-        
-        <!-- Other Teachers -->
+
+        <!-- Subject Teachers -->
         <div class="staff-card">
           <img src="assets/images/staff/harriette-bholanath.webp" alt="Harriette Bholanath" class="staff-photo">
           <h3 class="staff-name">Harriette Bholanath</h3>
-          <p class="staff-role">Teacher, Biology, History</p>
+          <p class="staff-role">Teacher Biology & History</p>
         </div>
         <div class="staff-card">
           <img src="assets/images/staff/rishi-kandhai.webp" alt="Rishi Kandhai" class="staff-photo">
           <h3 class="staff-name">Rishi Kandhai</h3>
-          <p class="staff-role">Teacher, Geography</p>
+          <p class="staff-role">Teacher Geography</p>
         </div>
         <div class="staff-card">
           <img src="assets/images/staff/andy-keizerweerd.webp" alt="Andy Keizerweerd" class="staff-photo">
           <h3 class="staff-name">Andy Keizerweerd</h3>
-          <p class="staff-role">Teacher, Drawing</p>
+          <p class="staff-role">Teacher Drawing</p>
         </div>
         <div class="staff-card">
           <img src="assets/images/staff/sherida-pelswijk.webp" alt="Sherida Pelswijk" class="staff-photo">
           <h3 class="staff-name">Sherida Pelswijk</h3>
-          <p class="staff-role">Teacher, Business Mathematics, ICT</p>
+          <p class="staff-role">Teacher Business Mathematics & ICT</p>
         </div>
         <div class="staff-card">
           <img src="assets/images/staff/sheldon-partoredjo.webp" alt="Sheldon Partoredjo" class="staff-photo">
           <h3 class="staff-name">Sheldon Partoredjo</h3>
-          <p class="staff-role">Teacher, Mathematics, Physics</p>
+          <p class="staff-role">Teacher Mathematics & Physics</p>
         </div>
         <div class="staff-card">
           <img src="assets/images/staff/Anushka-Jioet.jpeg" alt="Anoeshka Jioet" class="staff-photo">
           <h3 class="staff-name">Anoeshka Jioet</h3>
-          <p class="staff-role">Teacher, Spanish & Study Career Guidance (SLB)</p>
+          <p class="staff-role">Teacher Spanish & SLB</p>
         </div>
         <div class="staff-card">
           <img src="assets/images/user.png" alt="Sheik Alberg" class="staff-photo">
           <h3 class="staff-name">Sheik Alberg</h3>
-          <p class="staff-role">Teacher, Physical Education</p>
+          <p class="staff-role">Teacher Physical Education</p>
         </div>
-        
-        <!-- Other Roles -->
+
+        <!-- Support Staff -->
         <div class="staff-card">
           <img src="assets/images/staff/melissa-tanoesemito-padjie.webp" alt="Melissa Tanoesemito-Padjie" class="staff-photo">
           <h3 class="staff-name">Melissa Tanoesemito-Padjie</h3>
@@ -354,98 +309,94 @@
           <h3 class="staff-name">Carmen Rondón Leyva</h3>
           <p class="staff-role">Doctor</p>
         </div>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact/CTA Section -->
+  <section id="contact" class="cta-section section">
+    <div class="container cta-container">
+      <div class="cta-text">
+        <h2>Klaar voor de start?</h2>
+        <p>Schrijf uw kind in voor schooljaar 2025-2026 of kom langs voor een rondleiding.</p>
+        <div class="contact-details">
+          <p><i class="fa-solid fa-phone"></i> +597 8825406</p>
+          <p><i class="fa-solid fa-envelope"></i> contact@hoeksteen.sr</p>
+          <p><i class="fa-solid fa-map"></i> Keizerstraat 114, Paramaribo</p>
+        </div>
+      </div>
+      <div class="cta-form-wrapper">
+        <form class="simple-form">
+          <h3>Direct Informatie Aanvragen</h3>
+          <div class="form-group">
+            <label>Ik ben geïnteresseerd in:</label>
+            <select>
+              <option>Basisschool (Peuter - Lj 8)</option>
+              <option>College (Lj 1 - Lj 6)</option>
+            </select>
           </div>
-      </div>
-      
-      <div style="margin-top: 3rem;">
-        <div class="section__intro">
-          <h2>Onze Structuur</h2>
-          <p>Ons team is georganiseerd in drie kernpijlers om optimale begeleiding te bieden.</p>
-        </div>
-        <div class="team-grid">
-          <article class="team-card">
-            <h3>Directie</h3>
-            <p>De schoolleiding bewaakt de kwaliteit van het onderwijs en onderhoudt het contact met ouders en partners.</p>
-          </article>
-          <article class="team-card">
-            <h3>Mentoren</h3>
-            <p>Ieder leerjaar heeft een vaste mentor die ouders en leerlingen persoonlijk kent en begeleidt.</p>
-          </article>
-          <article class="team-card">
-            <h3>Ondersteuning</h3>
-            <p>Remedial teaching, logopedie en extra zorg op aanvraag, in samenwerking met specialistische partners.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section section--contact">
-      <div class="section__intro">
-        <h2>Contact &amp; kennismaking</h2>
-        <p>Plan een bezoek of stel een vraag. We maken graag tijd vrij voor een rondleiding of persoonlijk gesprek.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3>Direct Contact</h3>
-          <p><strong><i class="fa-solid fa-envelope"></i> E-mail:</strong> <a href="mailto:contact@hoeksteen.sr">contact@hoeksteen.sr</a></p>
-          <p><strong><i class="fa-solid fa-phone"></i> Telefoon:</strong> <a href="tel:+5978825406">+597 8825406</a></p>
-          <p><strong><i class="fa-solid fa-location-dot"></i> Adres:</strong> Keizerstraat 114, Paramaribo</p>
-          <div class="contact-buttons">
-            <a class="button btn-whatsapp" href="https://wa.me/5978825406" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            <button class="button" onclick="openRegistrationModal()"><i class="fa-solid fa-user-plus"></i> Registreer Nu</button>
+          <div class="form-group">
+            <input type="text" placeholder="Naam Ouder/Verzorger" required>
           </div>
-        </div>
-        
-        <div class="contact-card">
-          <h3>Volg Ons</h3>
-          <p>Blijf op de hoogte van het laatste nieuws en activiteiten:</p>
-          <div class="social-buttons">
-            <a class="social-btn facebook" href="https://www.facebook.com/hoeksteenschool" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i> Facebook</a>
-            <a class="social-btn instagram" href="https://www.instagram.com/basisschool_de_hoeksteen/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a>
-            <a class="social-btn tiktok" href="https://www.tiktok.com/@basisschooldehoeksteen_" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i> TikTok</a>
-            <a class="social-btn linkedin" href="https://www.linkedin.com/company/basisschooldehoeksteensuriname" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-            <a class="social-btn github" href="https://github.com/HoeksteenSchool" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+          <div class="form-group">
+            <input type="email" placeholder="E-mailadres" required>
           </div>
-        </div>
-        
-        <div class="contact-card contact-card--info">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.183996417089!2d-55.16393972249765!3d5.829664230831988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8d09cb0079d91423%3A0xeda1f2eb65dd1198!2sBasisschool%20De%20Hoeksteen!5e0!3m2!1sen!2s!4v1760802390638!5m2!1sen!2s" style="border:0; width: 100%; height: 300px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+          <button type="submit" class="btn btn-primary full-width">Verstuur Aanvraag</button>
+        </form>
       </div>
-    </section>
+    </div>
+  </section>
 
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p>&copy; <span id="year"></span> Basisschool De Hoeksteen. Alle rechten voorbehouden.<br>
-      <nav aria-label="Footer">
-        <a href="#welkom">Welkom</a>
-        <a href="#basisschool">Basisschool</a>
-        <a href="#college">College</a>
-        <a href="#team">Team</a>
-        <a href="#contact">Contact</a>
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-col">
+        <h5>De Hoeksteen.sr</h5>
+        <p>Christelijk onderwijs in Paramaribo.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Links</h5>
         <a href="#" onclick="openProtocolModal(); return false;">Anti-pestprotocol</a>
-        <a href="https://github.com/HoeksteenSchool" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-      </nav>
+        <a href="docs/hoeksteen-schoolgids-basisschool.pdf" download>Schoolgids Downloaden</a>
+        <a href="docs/hoeksteen-studiegids-college.pdf" download>Studiegids Downloaden</a>
+      </div>
+      <div class="footer-col">
+        <h5>Socials</h5>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/hoeksteenschool" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/basisschool_de_hoeksteen/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; <span id="year"></span> Basisschool & College De Hoeksteen. Alle rechten voorbehouden.</p>
     </div>
   </footer>
+
+  <!-- Floating Registration Button -->
+  <a class="floating-registration" onclick="openRegistrationModal()" title="Registreer nu">
+    <i class="fa-solid fa-user-plus"></i>
+  </a>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/5978825406" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
   <!-- Registration Modal -->
   <div id="registrationModal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
         <h2>Aanmelding Nieuwe Leerling</h2>
-          <span class="close" onclick="closeRegistrationModal()"><i class="fa-solid fa-xmark"></i></span>
+        <span class="close" onclick="closeRegistrationModal()"><i class="fa-solid fa-xmark"></i></span>
       </div>
-      
+
       <div class="wizard-progress">
         <div class="step active" data-step="1">1</div>
         <div class="step" data-step="2">2</div>
         <div class="step" data-step="3">3</div>
         <div class="step" data-step="4">4</div>
+        <div class="step" data-step="5">5</div>
       </div>
 
       <form id="registrationForm">
@@ -623,8 +574,8 @@
       </form>
 
       <div class="modal-footer">
-        <button type="button" class="btn-secondary" id="prevBtn" onclick="changeStep(-1)">Vorige</button>
-        <button type="button" class="btn-primary" id="nextBtn" onclick="changeStep(1)">Volgende</button>
+        <button type="button" class="btn btn-secondary" id="prevBtn" onclick="changeStep(-1)">Vorige</button>
+        <button type="button" class="btn btn-primary" id="nextBtn" onclick="changeStep(1)">Volgende</button>
       </div>
     </div>
   </div>
@@ -634,7 +585,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h2>Aanmeldingsbericht</h2>
-          <span class="close" onclick="closeMessageModal()"><i class="fa-solid fa-xmark"></i></span>
+        <span class="close" onclick="closeMessageModal()"><i class="fa-solid fa-xmark"></i></span>
       </div>
       <div class="modal-body">
         <p>Hier is uw aanmeldingsbericht. U kunt dit kopiëren en verzenden:</p>
@@ -642,9 +593,9 @@
           <textarea id="generatedMessage" readonly rows="10"></textarea>
         </div>
         <div class="action-buttons">
-          <button class="btn-primary" onclick="copyMessage()"><i class="fa-regular fa-copy"></i> Kopieer Bericht</button>
-          <button class="btn-whatsapp" onclick="sendWhatsApp()"><i class="fab fa-whatsapp"></i> WhatsApp Versturen</button>
-          <button class="btn-email" onclick="sendEmail()"><i class="fa-solid fa-envelope"></i> E-mail Versturen</button>
+          <button class="btn btn-primary" onclick="copyMessage()"><i class="fa-regular fa-copy"></i> Kopieer Bericht</button>
+          <button class="btn btn-whatsapp" onclick="sendWhatsApp()"><i class="fa-brands fa-whatsapp"></i> WhatsApp Versturen</button>
+          <button class="btn btn-email" onclick="sendEmail()"><i class="fa-solid fa-envelope"></i> E-mail Versturen</button>
         </div>
       </div>
     </div>
@@ -655,10 +606,9 @@
     <div class="modal-content">
       <div class="modal-header">
         <h2>Anti-pestprotocol</h2>
-  <span class="close" onclick="closeProtocolModal()"><i class="fa-solid fa-xmark"></i></span>
+        <span class="close" onclick="closeProtocolModal()"><i class="fa-solid fa-xmark"></i></span>
       </div>
       <div class="modal-body">
-        <!-- Dutch protocol content copied from old site -->
         <div class="protocol-content">
           <h3>Doel</h3>
           <p>Het doel van dit anti-pestprotocol is om ervoor te zorgen dat:</p>
@@ -668,27 +618,25 @@
             <li>Iedereen die betrokken is bij De Hoeksteen kan rekenen op ondersteuning en respect.</li>
           </ul>
           <p>Door regels en afspraken zichtbaar te maken, kunnen kinderen en volwassenen elkaar hierop aanspreken als ongewenste situaties zich voordoen.</p>
+
           <h3>1. Omgaan met Pesten op School</h3>
           <p>Helaas komt pesten op elke school voor, inclusief de onze. Het is een probleem dat we erkennen en serieus nemen op De Hoeksteen.</p>
           <p><strong>Voorwaarden voor het aanpakken van pesten:</strong></p>
           <ul>
-            <li>Pesten moet worden erkend als een probleem door alle direct betrokken partijen: leerlingen (gepeste kinderen, pesters en omstanders), leerkrachten en ouders.</li>
+            <li>Pesten moet worden erkend als een probleem door alle direct betrokken partijen.</li>
             <li>De school moet actief werken aan het voorkomen van pesten.</li>
-            <li>Of er nu sprake is van pesten of niet, het onderwerp moet met kinderen worden besproken, waarna regels en gedragsnormen worden vastgesteld.</li>
             <li>Als pesten voorkomt, moeten kinderen en hun ouders dit kunnen melden.</li>
             <li>Leerkrachten en opvoeders moeten een duidelijke positie innemen tegen pesten.</li>
-            <li>Als pesten zich ondanks inspanningen herhaalt, moet er direct worden ingegrepen.</li>
-            <li>Een vertrouwenspersoon is aangesteld op school.</li>
-            <li>Als het probleem niet adequaat wordt opgelost, kan een vertrouwensadviseur worden ingeschakeld om te onderzoeken, experts te raadplegen en de bevoegde autoriteiten te adviseren.</li>
           </ul>
+
           <h3>2. Pesten Herkennen</h3>
-          <p>Pesten komt voor in alle groepen van de basisschool.</p>
-          <p><strong>Tekenen van pesten kunnen zijn:</strong></p>
+          <p>Pesten komt voor in alle groepen van de basisschool. Tekenen van pesten kunnen zijn:</p>
           <ul>
             <li>Altijd een bijnaam gebruiken in plaats van iemands echte naam.</li>
             <li>Subtiele, negatieve opmerkingen maken over een klasgenoot.</li>
             <li>Voortdurend de schuld geven aan een klasgenoot.</li>
-            <li>Briefjes doorgeven, sms'en of WhatsApp-berichten
+          </ul>
+
           <h3>5. Conflictoplossing in Vier Stappen</h3>
           <ol>
             <li><strong>Stap 1:</strong> Leerlingen proberen het probleem zelf op te lossen.</li>
@@ -696,65 +644,31 @@
             <li><strong>Stap 3:</strong> De leerkracht bemiddelt in een gesprek tussen de betrokken partijen.</li>
             <li><strong>Stap 4:</strong> Als pesten doorgaat, worden disciplinaire maatregelen genomen en worden ouders betrokken.</li>
           </ol>
+
           <h3>6. Hoe Willen We Dit Aanpakken?</h3>
           <ul>
-            <li>Op school bespreken we regelmatig onderwerpen zoals veiligheid, sociale rollen, conflictoplossing en samenwerken in groepen.</li>
+            <li>Op school bespreken we regelmatig onderwerpen zoals veiligheid, sociale rollen, conflictoplossing en samenwerken.</li>
             <li>Leerlingen nemen deel aan activiteiten zoals toespraken, rollenspellen en het vaststellen van gedragsregels.</li>
-            <li>Kinderen moeten begrijpen wat het verschil is tussen onschuldig plagen en pesten.</li>
-            <li>Leerkrachten en ouders geven het goede voorbeeld, omdat een respectvolle sfeer pesten vermindert.</li>
-            <li>Leerkrachten nemen een duidelijke houding aan tegen agressief of schadelijk gedrag.</li>
-            <li>Een effectieve manier om pesten te voorkomen is het vaststellen van duidelijke regels voor leerlingen.</li>
+            <li>Leerkrachten en ouders geven het goede voorbeeld.</li>
           </ul>
+
           <h3>7. Belangrijke Regels om Pesten te Voorkomen</h3>
-          <p><strong>Regel 1:</strong> Melden bij de leerkracht wordt niet als klikken beschouwd. Vanaf jonge leeftijd leren kinderen dat als ze worden gepest of een probleem hebben dat ze niet kunnen oplossen, ze hulp moeten vragen aan een leerkracht.</p>
-          <p><strong>Regel 2:</strong> Medeleerlingen hebben ook de verantwoordelijkheid om pesten te melden. Een goede sfeer in de klas is een gezamenlijke verantwoordelijkheid.</p>
+          <p><strong>Regel 1:</strong> Melden bij de leerkracht wordt niet als klikken beschouwd.</p>
+          <p><strong>Regel 2:</strong> Medeleerlingen hebben ook de verantwoordelijkheid om pesten te melden.</p>
+
           <h3>8. Gevolgen van Pesten</h3>
           <ul>
             <li>Waarschuwingen en reflectieoefeningen.</li>
             <li>Time-out sessies of nablijven.</li>
             <li>Oudergesprekken.</li>
-            <li>Indien aanhoudend, kan deskundige hulp worden ingeschakeld (bijv. psycholoog, maatschappelijk werker).</li>
+            <li>Indien aanhoudend, kan deskundige hulp worden ingeschakeld.</li>
             <li>Ernstige gevallen kunnen leiden tot schorsing of verwijdering.</li>
           </ul>
-          <h3>9. Stappen bij Herhaald Pesten</h3>
-          <p><strong>Stap 3:</strong></p>
-          <ul>
-            <li>De leerkracht brengt de betrokken partijen samen voor een verhelderend gesprek.</li>
-            <li>Het doel is om het probleem samen op te lossen en nieuwe afspraken te maken.</li>
-            <li>Bij herhaald pesten worden sancties toegepast.</li>
-          </ul>
-          <p><strong>Stap 4:</strong></p>
-          <ul>
-            <li>Bij aanhoudend pesten neemt de leerkracht een duidelijke positie in.</li>
-            <li>Een disciplinair gesprek wordt gehouden met de verantwoordelijke leerling.</li>
-            <li>Herhaalde incidenten worden geregistreerd, inclusief de omstandigheden.</li>
-            <li>Na de derde registratie worden ouders officieel geïnformeerd over het gedrag van hun kind.</li>
-          </ul>
-          <h3>10. Ondersteuning voor het Slachtoffer</h3>
-          <ul>
-            <li>Slachtoffers krijgen emotionele ondersteuning en copingstrategieën.</li>
-            <li>Ouders worden aangemoedigd om open communicatie met hun kinderen te onderhouden.</li>
-            <li>De school monitort het welzijn om herhaling van incidenten te voorkomen.</li>
-          </ul>
-          <h3>11. Verantwoordelijkheden van Ouders</h3>
-          <ul>
-            <li><strong>Ouders van gepeste kinderen:</strong> Moedig veerkracht, zelfvertrouwen en open communicatie aan.</li>
-            <li><strong>Ouders van pesters:</strong> Neem de situatie serieus, bespreek de gevolgen met uw kind en stimuleer positief gedrag thuis.</li>
-          </ul>
-          <h3>12. Schooltoewijding</h3>
-          <p>Alle leerkrachten, medewerkers en leerlingen moeten zich houden aan dit protocol om een veilige en respectvolle leeromgeving op Basisschool De Hoeksteen te garanderen.</p>
-          <p>Voor meer informatie of vragen kunt u contact opnemen met de vertrouwenspersoon of de schooladministratie.</p>
-          <p>Dit protocol wordt jaarlijks geëvalueerd en indien nodig bijgewerkt om de effectiviteit van pestenpreventie- en interventiestrategieën te waarborgen.</p>
         </div>
       </div>
     </div>
   </div>
 
   <script src="assets/app.js"></script>
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/5978825406" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
 </body>
 </html>
