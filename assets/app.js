@@ -29,51 +29,6 @@
     yearTarget.textContent = new Date().getFullYear();
   }
 
-  // Slideshow functionality
-  let slideIndex = 1;
-  let slideInterval;
-
-  function showSlide(n) {
-    const slides = document.querySelectorAll('.slide');
-    
-    if (n > slides.length) { slideIndex = 1; }
-    if (n < 1) { slideIndex = slides.length; }
-    
-    slides.forEach(slide => slide.classList.remove('active'));
-    
-    if (slides[slideIndex - 1]) {
-      slides[slideIndex - 1].classList.add('active');
-    }
-  }
-
-  function nextSlide() {
-    slideIndex++;
-    showSlide(slideIndex);
-  }
-
-  function resetAutoSlide() {
-    clearInterval(slideInterval);
-    slideInterval = setInterval(nextSlide, 5000);
-  }
-
-  // Initialize slideshow
-  if (document.querySelector('.slideshow-container')) {
-    showSlide(slideIndex);
-    slideInterval = setInterval(nextSlide, 5000);
-  }
-
-  // Pause slideshow on hover
-  const slideshowContainer = document.querySelector('.slideshow-container');
-  if (slideshowContainer) {
-    slideshowContainer.addEventListener('mouseenter', () => {
-      clearInterval(slideInterval);
-    });
-    
-    slideshowContainer.addEventListener('mouseleave', () => {
-      slideInterval = setInterval(nextSlide, 5000);
-    });
-  }
-
   // Registration Modal Functionality
   let currentStep = 1;
   const totalSteps = 5;
