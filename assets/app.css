@@ -402,11 +402,6 @@ ul {
 
 .team-member {
   text-align: center;
-  background: var(--white);
-  border-radius: 16px;
-  padding: 1.25rem;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .avatar {
@@ -427,7 +422,7 @@ ul {
 }
 
 .role {
-  color: var(--muted);
+  color: var(--text-light);
   font-size: 0.9rem;
 }
 
