@@ -105,13 +105,12 @@ ul {
 .btn-secondary {
   background-color: var(--white);
   color: var(--primary);
-  border: 2px solid var(--primary);
+  border: 2px solid var(--white);
 }
 
 .btn-secondary:hover {
-  background-color: var(--primary);
+  background-color: transparent;
   color: var(--white);
-  transform: translateY(-2px);
 }
 
 .highlight {
