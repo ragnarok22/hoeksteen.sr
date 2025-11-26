@@ -593,7 +593,8 @@ footer,
   margin-top: 10px;
 }
 
-.social-icons i {
+.social-icons i,
+.social-icons svg {
   width: 24px;
   height: 24px;
   color: var(--accent);
@@ -601,7 +602,8 @@ footer,
   transition: color 0.3s;
 }
 
-.social-icons i:hover {
+.social-icons i:hover,
+.social-icons svg:hover {
   color: var(--white);
 }
 
