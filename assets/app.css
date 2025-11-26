@@ -1013,6 +1013,21 @@ footer,
     font-size: 1.05rem;
   }
 
+  .paths {
+    padding: 60px 0;
+  }
+
+  .path-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .path-card {
+    margin: 0 auto;
+    max-width: 460px;
+  }
+
   .hero-buttons,
   .hero__actions {
     flex-direction: column;
@@ -1027,6 +1042,7 @@ footer,
   .cta-container {
     flex-direction: column;
     gap: 1.5rem;
+    padding: 0;
   }
 
   .cta-form-wrapper {
@@ -1106,6 +1122,19 @@ footer,
 
   .hero {
     padding: 1.75rem 1.25rem;
+  }
+
+  .paths {
+    padding: 50px 0;
+  }
+
+  .path-grid {
+    padding: 0;
+    gap: 14px;
+  }
+
+  .path-card {
+    max-width: 420px;
   }
 
   .hero h1,
