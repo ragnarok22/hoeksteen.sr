@@ -448,6 +448,51 @@ ul {
   padding: 80px 0;
 }
 
+.address-trigger {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+  background: var(--white);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: var(--text);
+}
+
+.address-trigger i {
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+.address-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.95rem;
+}
+
+.address-text span {
+  color: var(--text-light);
+  font-size: 0.85rem;
+}
+
+.address-trigger:hover {
+  background: var(--primary);
+  color: var(--white);
+  box-shadow: 0 6px 18px rgba(30, 58, 138, 0.22);
+  border-color: var(--primary);
+}
+
+.address-trigger:hover i,
+.address-trigger:hover .address-text span {
+  color: var(--white);
+}
+
 .cta-section .btn-secondary {
   border-color: var(--primary);
   color: var(--primary);
