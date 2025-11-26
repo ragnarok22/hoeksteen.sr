@@ -324,7 +324,9 @@
         <div class="contact-details">
           <p><i class="fa-solid fa-phone"></i> +597 8825406</p>
           <p><i class="fa-solid fa-envelope"></i> contact@hoeksteen.sr</p>
-          <p><i class="fa-solid fa-map"></i> Keizerstraat 114, Paramaribo</p>
+          <p class="address-trigger" onclick="openAddressModal()" role="button" tabindex="0">
+            <i class="fa-solid fa-map"></i> Keizerstraat 114, Paramaribo
+          </p>
         </div>
       </div>
       <div class="cta-form-wrapper">
@@ -670,6 +672,26 @@
             <li>Ernstige gevallen kunnen leiden tot schorsing of verwijdering.</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Address Modal -->
+  <div id="addressModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Adres Basisschool &amp; College De Hoeksteen</h2>
+        <span class="close" onclick="closeAddressModal()"><i class="fa-solid fa-xmark"></i></span>
+      </div>
+      <div class="modal-body">
+        <p><strong>Keizerstraat 114, Paramaribo, Suriname</strong></p>
+        <div class="map-embed">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.183996417089!2d-55.16393972249765!3d5.829664230831988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8d09cb0079d91423%3A0xeda1f2eb65dd1198!2sBasisschool%20De%20Hoeksteen!5e0!3m2!1sen!2s!4v1760802390638!5m2!1sen!2s" style="border:0; width: 100%; height: 300px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p>Centraal gelegen in Paramaribo, makkelijk bereikbaar met de auto of openbaar vervoer.</p>
+        <p>Telefoon: <a href="tel:+5978825406">+597 8825406</a></p>
+        <p>E-mail: <a href="mailto:contact@hoeksteen.sr">contact@hoeksteen.sr</a></p>
+        <p><a href="https://www.google.com/maps?q=Keizerstraat+114,+Paramaribo,+Suriname" target="_blank" rel="noopener">Open in Google Maps</a></p>
       </div>
     </div>
   </div>

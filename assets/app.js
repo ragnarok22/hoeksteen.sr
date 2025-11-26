@@ -401,6 +401,14 @@ Ouders van ${data.childName}
     closeProtocolModal: function() {
       document.getElementById('protocolModal').style.display = 'none';
       document.body.classList.remove('modal-open');
+    },
+    openAddressModal: function() {
+      document.getElementById('addressModal').style.display = 'block';
+      document.body.classList.add('modal-open');
+    },
+    closeAddressModal: function() {
+      document.getElementById('addressModal').style.display = 'none';
+      document.body.classList.remove('modal-open');
     }
   };
   // For inline handlers
@@ -409,5 +417,7 @@ Ouders van ${data.childName}
   window.closeMessageModal = window._hoeksteenModalFns.closeMessageModal;
   window.openProtocolModal = window._hoeksteenModalFns.openProtocolModal;
   window.closeProtocolModal = window._hoeksteenModalFns.closeProtocolModal;
+  window.openAddressModal = window._hoeksteenModalFns.openAddressModal;
+  window.closeAddressModal = window._hoeksteenModalFns.closeAddressModal;
 
 })();
