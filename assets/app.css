@@ -382,159 +382,16 @@ ul {
   text-align: center;
 }
 
-.feature-card {
-  border-radius: 14px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  background: var(--white);
-}
-
 .icon-lg {
-  width: 40px;
-  height: 40px;
+  font-size: 3rem;
   color: var(--accent);
   margin-bottom: 20px;
-}
-
-/* Highlight cards */
-.highlight-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.highlight-card {
-  background: var(--white);
-  border-radius: 18px;
-  padding: 2rem;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 3px solid var(--accent);
-  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.15);
-}
-
-.highlight-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(245, 158, 11, 0.25);
-}
-
-.highlight-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.highlight-card h3 {
-  color: var(--primary);
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-}
-
-.highlight-card p {
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-/* Download cards */
-.download-hint {
-  color: var(--muted);
-  margin-bottom: 0.6rem;
-}
-
-.download-card-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.download-card {
-  display: flex;
-  align-items: center;
-  gap: 1.1rem;
-  border-radius: 16px;
-  box-shadow: 0 6px 24px rgba(245, 158, 11, 0.13);
-  padding: 1.2rem 2rem;
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-  min-width: 260px;
-  flex: 1 1 320px;
-  max-width: 420px;
-  background: linear-gradient(135deg, #fffbe6 60%, #ffe066 100%);
-  border: 3px solid var(--accent);
-}
-
-.download-card:hover {
-  border-color: var(--primary);
-  box-shadow: 0 10px 32px rgba(30, 58, 138, 0.13);
-  transform: translateY(-4px) scale(1.03);
-}
-
-.download-card__icon {
-  font-size: 2.2rem;
-  color: var(--primary);
-  flex-shrink: 0;
-}
-
-.download-card__content {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.download-card__title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--primary);
-}
-
-.download-card__desc {
-  font-size: 0.97rem;
-  color: var(--muted);
-}
-
-.download-card__action {
-  font-size: 0.98rem;
-  color: var(--primary);
-  font-weight: 600;
-  margin-left: 1.2rem;
-  white-space: nowrap;
+  display: block;
 }
 
 /* --- Team --- */
 .team {
   padding: 80px 0;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
-}
-
-.team-member {
-  text-align: center;
-}
-
-.avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin: 0 auto 15px;
-  background-size: cover;
-  background-position: center;
-  border: 3px solid var(--white);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.role {
-  color: var(--text-light);
-  font-size: 0.9rem;
 }
 
 /* Staff grid */
@@ -584,18 +441,6 @@ ul {
   margin: 0;
   line-height: 1.3;
   text-align: center;
-}
-
-.team-card {
-  background: var(--white);
-  border-radius: 14px;
-  padding: 1.6rem;
-  border: 2px solid var(--accent);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.team-card h3 {
-  color: var(--primary);
 }
 
 /* --- CTA Section --- */
@@ -676,131 +521,6 @@ ul {
 .full-width {
   width: 100%;
   text-align: center;
-}
-
-/* Contact grid */
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-}
-
-.contact-card {
-  background: var(--white);
-  border-radius: 14px;
-  padding: 1.6rem;
-  border: 2px solid var(--accent);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.contact-card h3 {
-  color: var(--primary);
-}
-
-.contact-card--info {
-  overflow: hidden;
-}
-
-.contact-card--info iframe {
-  display: block;
-  width: 100%;
-  height: 300px;
-  border: 0;
-}
-
-/* Buttons */
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  padding: 0.72rem 1.5rem;
-  border-radius: 999px;
-  border: 2px solid transparent;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--white);
-  background: var(--primary);
-  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
-  transition: all 0.3s ease;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.button:hover {
-  background: #172554;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.4);
-}
-
-.button.button--ghost {
-  background: transparent;
-  color: var(--primary);
-  border-color: var(--primary);
-}
-
-.button.button--ghost:hover {
-  background: var(--primary);
-  color: var(--white);
-}
-
-/* Contact buttons */
-.contact-buttons,
-.social-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.social-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  color: white;
-}
-
-.social-btn.facebook {
-  background: #1877F2;
-}
-
-.social-btn.facebook:hover {
-  background: #166FE5;
-}
-
-.social-btn.instagram {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-}
-
-.social-btn.tiktok {
-  background: #000000;
-  color: #fff;
-}
-
-.social-btn.tiktok:hover {
-  background: #222;
-}
-
-.social-btn.linkedin {
-  background: #0077b5;
-}
-
-.social-btn.linkedin:hover {
-  background: #005983;
-}
-
-.social-btn.github {
-  background: #333;
-}
-
-.social-btn.github:hover {
-  background: #24292e;
 }
 
 .btn-whatsapp {
@@ -1268,9 +988,7 @@ footer,
     padding: 1.5rem;
   }
 
-  .action-buttons,
-  .contact-buttons,
-  .social-buttons {
+  .action-buttons {
     flex-direction: column;
   }
 
@@ -1289,17 +1007,6 @@ footer,
     width: 48px;
     height: 48px;
     font-size: 1.8rem;
-  }
-
-  .download-card-grid {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .download-card {
-    padding: 1rem 1.2rem;
-    min-width: 0;
-    max-width: 100%;
   }
 }
 
