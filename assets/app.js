@@ -29,11 +29,6 @@
     yearTarget.textContent = new Date().getFullYear();
   }
 
-  // Render lucide icons if library is available
-  if (window.lucide && typeof window.lucide.createIcons === 'function') {
-    window.lucide.createIcons();
-  }
-
   // Hero slider (simple cross-fade, 5s interval)
   const heroSlides = document.querySelectorAll('.hero-slide');
   if (heroSlides.length > 1) {
