@@ -105,12 +105,13 @@ ul {
 .btn-secondary {
   background-color: var(--white);
   color: var(--primary);
-  border: 2px solid var(--white);
+  border: 2px solid var(--primary);
 }
 
 .btn-secondary:hover {
-  background-color: transparent;
+  background-color: var(--primary);
   color: var(--white);
+  transform: translateY(-2px);
 }
 
 .highlight {
@@ -910,33 +911,6 @@ footer,
   transform: scale(1.08);
 }
 
-.floating-registration {
-  position: fixed;
-  right: 32px;
-  bottom: 104px;
-  z-index: 10000;
-  background: var(--primary);
-  color: var(--white);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  box-shadow: 0 4px 16px rgba(30, 58, 138, 0.18);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.1rem;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s;
-  text-decoration: none;
-}
-
-.floating-registration:hover {
-  background: #fff;
-  color: var(--primary);
-  transform: scale(1.08);
-}
-
 /* --- Modals --- */
 .modal {
   display: none;
@@ -1307,14 +1281,6 @@ footer,
 
   .radio-grid {
     grid-template-columns: 1fr;
-  }
-
-  .floating-registration {
-    right: 16px;
-    bottom: 76px;
-    width: 48px;
-    height: 48px;
-    font-size: 1.5rem;
   }
 
   .floating-whatsapp {
